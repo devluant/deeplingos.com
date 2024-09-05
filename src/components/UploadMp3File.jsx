@@ -2,9 +2,7 @@ import React from "react"
 import hashText from "../utilities/hashText";
 import getLessonData from "../utilities/getLessonData";
 
-export default function UploadMP3File() {
-    const [lessonData, setLessonData] = React.useState([])
-
+export default function UploadMP3File(props) {    
     const mp3InputRef = React.useRef(null)
 
     function handleClick() {
@@ -18,7 +16,7 @@ export default function UploadMP3File() {
             if (file.type === "audio/mpeg" || file.name.endsWith("mp3")) {
                 console.log(`${file.name}`)
                 hashText(file.name).then(hash => {
-                    getLessonData(hash, setLessonData)
+                    getLessonData(hash, props.setLessonData)
                 });
             } else {
                 console.log("File type not valid. Only accept mp3 audio file.")
@@ -30,10 +28,7 @@ export default function UploadMP3File() {
     return (
         <>
             <button onClick={ handleClick }>Upload MP3</button>
-            <input onChange={ handleChange } ref={mp3InputRef} type="file" id="mp3-input" accept=".mp3" style={ {display: "none"} } />
-            {
-                lessonData.length > 0 ? <h1>{ lessonData[0].translation }</h1> : <h1>No Lesson Text Found</h1>
-            }
+            <input onChange={ handleChange } ref={mp3InputRef} type="file" id="mp3-input" accept=".mp3" style={ {display: "none"} } />            
         </>
     )
 }
