@@ -10,6 +10,7 @@ function getLessonData(lessonHash, setLessonData) {
         const { lessonData } = docSnap.data();
         setLessonData(JSON.parse(lessonData));
       } else {
+        setLessonData([]);
         console.info("No such document!");
       }
     })

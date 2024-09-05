@@ -31,6 +31,9 @@ export default function UploadMP3File() {
         <>
             <button onClick={ handleClick }>Upload MP3</button>
             <input onChange={ handleChange } ref={mp3InputRef} type="file" id="mp3-input" accept=".mp3" style={ {display: "none"} } />
+            {
+                lessonData.length > 0 ? <h1>{ lessonData[0].translation }</h1> : <h1>No Lesson Text Found</h1>
+            }
         </>
     )
 }
