@@ -56,6 +56,18 @@ export default function Steps(props) {
             audioRef.current.pause()
         }
     }
+
+    function handlePlaybackRate() {
+        let currentPlaybackRate = audioRef.current.playbackRate
+        if(currentPlaybackRate >= 1.0) {
+            audioRef.current.playbackRate = 0.75
+        } else {
+            audioRef.current.playbackRate = 1.0
+        }
+        currentPlaybackRate = audioRef.current.playbackRate
+        console.log(currentPlaybackRate)
+    }
+
     return (
         <div className="h-screen flex flex-col justify-evenly border-4 border-yellow-300">
             <audio ref={ audioRef } src={ props.audioFile } onTimeUpdate={ handleTimeUpdate } controls></audio>
@@ -66,7 +78,8 @@ export default function Steps(props) {
                 { lineElements }
             </div>
 
-            <div className="h-[7%] bg-neutral-300">
+            <div className="h-[7%] flex justify-between px-4 bg-neutral-300">
+                <button onClick={ handlePlaybackRate }>0.75X</button>
                 <button onClick={ handleContinue }>Continue</button>
             </div>
         </div>            
