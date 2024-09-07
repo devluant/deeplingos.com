@@ -1,9 +1,11 @@
 import React from "react"
 import hashText from "../utilities/hashText";
 import getLessonData from "../utilities/getLessonData";
+import { AudioContext } from "../App";
 
 export default function UploadMP3File(props) {    
     const mp3InputRef = React.useRef(null)
+    const {audioFile, setAudioFile} = React.useContext(AudioContext)
 
     function handleClick() {
         mp3InputRef.current.click()
@@ -15,6 +17,7 @@ export default function UploadMP3File(props) {
         if (file) {
             if (file.type === "audio/mpeg" || file.name.endsWith("mp3")) {
                 console.log(`${file.name}`)
+                setAudioFile(URL.createObjectURL(file))
                 hashText(file.name).then(hash => {
                     getLessonData(hash, props.setLessonData)
                 });
