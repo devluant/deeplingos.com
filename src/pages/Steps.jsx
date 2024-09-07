@@ -10,6 +10,7 @@ export default function Steps(props) {
     const endOfLineElementsRef = React.useRef(null)
     const audioRef = React.useRef(null)
     const endTime = React.useRef(0)
+    const [displayTranslation, setDisplayTranslation] = React.useState(false)
 
     React.useEffect(() => {
         if (endOfLineElementsRef.current) {
@@ -30,8 +31,6 @@ export default function Steps(props) {
             }
         }
 
-        console.log("line", line)
-
         let jsx
 
         if (line.type === "dialogue") {
@@ -46,6 +45,7 @@ export default function Steps(props) {
 
         return <div className={`mb-10 px-4 ${ index === props.lines.length - 1 ? "bg-neutral-50 py-4" : "" }`} ref={ setRef } key={ line.id }>            
             { jsx }
+            { displayTranslation && <p>{ line.english }</p>}
         </div>
     })
 
@@ -59,6 +59,10 @@ export default function Steps(props) {
 
     function restartLesson() {
         props.setLines([props.lessonData[0]])
+    }
+
+    function handleDisplayTranslation() {
+        setDisplayTranslation(prev => !prev)
     }
 
     // Audio Player
@@ -93,8 +97,11 @@ export default function Steps(props) {
     return (
         <div className="h-screen flex flex-col justify-evenly border-4 border-yellow-300">
             <audio ref={ audioRef } src={ props.audioFile } onTimeUpdate={ handleTimeUpdate } style={ {display: "none"} }></audio>
-            <div className="h-[7%] bg-neutral-300 flex items-center px-4">
+            <div className="h-[7%] bg-neutral-300 flex items-center px-4 justify-between">
                 <Link to="/">Back</Link>
+                <div>
+                    <button onClick={ handleDisplayTranslation }>EN</button>
+                </div>
             </div>
             <div className="h-5/6 overflow-y-auto bg-neutral-200">
                 { lineElements }
