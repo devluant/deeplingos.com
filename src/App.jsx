@@ -7,7 +7,7 @@ const AudioContext = React.createContext()
 
 export default function App() {
     const [lessonData, setLessonData] = React.useState([])    
-    const [lines, setLines] = React.useState([lessonData[0]])
+    const [lines, setLines] = React.useState([])
     const [audioFile, setAudioFile] = React.useState(null)
 
     React.useEffect(() => {
