@@ -32,6 +32,7 @@ export default function Steps(props) {
 
     return (
         <div className="h-screen flex flex-col justify-evenly border-4 border-yellow-300">
+            <audio src={ props.audioFile } controls></audio>
             <div className="h-[7%] bg-neutral-300">
                 <Link to="/">Back</Link>
             </div>
