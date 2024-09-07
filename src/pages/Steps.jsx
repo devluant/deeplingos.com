@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import Text from "../components/Text"
+import Dialogue from "../components/TextLineTypes/Dialogue"
+import Intro from "../components/TextLineTypes/Intro"
+import DialogueCTN from "../components/TextLineTypes/DialogueCTN"
+import Narrative from "../components/TextLineTypes/Narrative"
 
 export default function Steps(props) {
     const endOfLineElementsRef = React.useRef(null)
@@ -26,8 +30,22 @@ export default function Steps(props) {
             }
         }
 
+        console.log("line", line)
+
+        let jsx
+
+        if (line.type === "dialogue") {
+            jsx = <Dialogue line={ line } />
+        } else if (line.type === "dialogue-ctn") {
+            jsx = <DialogueCTN line={ line } />
+        } else if (line.type === "intro") {
+            jsx = <Intro line={ line } />
+        } else {
+            jsx = <Narrative line={ line } />
+        }
+
         return <div className={`mb-10 px-4 ${ index === props.lines.length - 1 ? "bg-neutral-50 py-4" : "" }`} ref={ setRef } key={ line.id }>            
-            <Text line={ line } />
+            { jsx }
         </div>
     })
 
