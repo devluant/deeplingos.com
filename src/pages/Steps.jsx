@@ -81,6 +81,7 @@ export default function Steps(props) {
             <div className="h-[7%] flex justify-between px-4 bg-neutral-300">
                 <button onClick={ handlePlaybackRate }>0.75X</button>
                 <button onClick={ handleContinue }>Continue</button>
+                <button onClick={ playAudio }>Replay</button>
             </div>
         </div>            
     )
