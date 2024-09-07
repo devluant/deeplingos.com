@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Text from "../components/Text"
 
 export default function Steps(props) {
     const endOfLineElementsRef = React.useRef(null)
@@ -29,7 +30,9 @@ export default function Steps(props) {
             }
         }
 
-        return <div className="mb-10" ref={ setRef } key={ line.id }>{ line.pinyin }</div>
+        return <div className="mb-10 px-4" ref={ setRef } key={ line.id }>
+            <Text line={ line } />
+        </div>
     })
 
     function handleContinue() {
