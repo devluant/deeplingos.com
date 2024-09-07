@@ -82,16 +82,16 @@ export default function Steps(props) {
                 { lineElements }
             </div>
 
-            <div className="h-[7%] px-4 bg-neutral-300">
+            <div className="h-[7%] px-4 bg-neutral-300 flex items-center">
                 {
                     props.lines.length < props.lessonData.length ?
-                    <div className="flex justify-between">
+                    <div className="flex flex-grow justify-between">
                         <button onClick={ handlePlaybackRate }>0.75X</button>
                         <button onClick={ handleContinue }>Continue</button>
                         <button onClick={ playAudio }>Replay</button>
                     </div>
                     : 
-                    <div className="flex justify-center">
+                    <div className="flex flex-grow justify-center">
                         <button onClick={ restartLesson }>Restart Lesson</button>
                     </div>
                 }
