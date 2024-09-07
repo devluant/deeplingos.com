@@ -3,8 +3,6 @@ import { Link } from "react-router-dom"
 
 export default function Steps(props) {
     const endOfLineElementsRef = React.useRef(null)
-    const [lines, setLines] = React.useState([props.lessonData[0]])
-
     React.useEffect(() => {
         if (endOfLineElementsRef.current) {
             endOfLineElementsRef.current.scrollIntoView({
@@ -12,11 +10,11 @@ export default function Steps(props) {
                 block: "center"
             })
         }
-    } , [lines])
+    } , [props.lines])
 
-    const lineElements = lines.map((line, index) => {
+    const lineElements = props.lines.map((line, index) => {
         const setRef = node => {
-            if (index === lines.length - 1) {
+            if (index === props.lines.length - 1) {
                 endOfLineElementsRef.current = node
             }
         }
@@ -25,8 +23,8 @@ export default function Steps(props) {
     })
 
     function handleContinue() {
-        if (lines.length < props.lessonData.length) {
-            setLines(prev => [...prev, props.lessonData[prev.length]])
+        if (props.lines.length < props.lessonData.length) {
+            props.setLines(prev => [...prev, props.lessonData[prev.length]])
         } else {
             console.log("done")
         }            
