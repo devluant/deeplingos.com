@@ -75,23 +75,23 @@ export default function Steps(props) {
     return (
         <div className="h-screen flex flex-col justify-evenly border-4 border-yellow-300">
             <audio ref={ audioRef } src={ props.audioFile } onTimeUpdate={ handleTimeUpdate } controls></audio>
-            <div className="h-[7%] bg-neutral-300">
+            <div className="h-[7%] bg-neutral-300 flex items-center px-4">
                 <Link to="/">Back</Link>
             </div>
             <div className="h-5/6 overflow-y-auto bg-neutral-200">
                 { lineElements }
             </div>
 
-            <div className="h-[7%] px-4 bg-neutral-300">
+            <div className="h-[7%] px-4 bg-neutral-300 flex items-center">
                 {
                     props.lines.length < props.lessonData.length ?
-                    <div className="flex justify-between">
+                    <div className="flex flex-grow justify-between">
                         <button onClick={ handlePlaybackRate }>0.75X</button>
                         <button onClick={ handleContinue }>Continue</button>
                         <button onClick={ playAudio }>Replay</button>
                     </div>
                     : 
-                    <div className="flex justify-center">
+                    <div className="flex flex-grow justify-center">
                         <button onClick={ restartLesson }>Restart Lesson</button>
                     </div>
                 }
