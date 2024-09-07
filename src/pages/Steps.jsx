@@ -39,6 +39,10 @@ export default function Steps(props) {
         }        
     }
 
+    function restartLesson() {
+        props.setLines([props.lessonData[0]])
+    }
+
     // Audio Player
     function playAudio() {        
         if(props.lines.at(-1)) {
@@ -78,10 +82,20 @@ export default function Steps(props) {
                 { lineElements }
             </div>
 
-            <div className="h-[7%] flex justify-between px-4 bg-neutral-300">
-                <button onClick={ handlePlaybackRate }>0.75X</button>
-                <button onClick={ handleContinue }>Continue</button>
-                <button onClick={ playAudio }>Replay</button>
+            <div className="h-[7%] px-4 bg-neutral-300">
+                {
+                    props.lines.length < props.lessonData.length ?
+                    <div className="flex justify-between">
+                        <button onClick={ handlePlaybackRate }>0.75X</button>
+                        <button onClick={ handleContinue }>Continue</button>
+                        <button onClick={ playAudio }>Replay</button>
+                    </div>
+                    : 
+                    <div className="flex justify-center">
+                        <button onClick={ restartLesson }>Restart Lesson</button>
+                    </div>
+                }
+                
             </div>
         </div>            
     )
