@@ -92,7 +92,7 @@ export default function Steps(props) {
 
     return (
         <div className="h-screen flex flex-col justify-evenly border-4 border-yellow-300">
-            <audio ref={ audioRef } src={ props.audioFile } onTimeUpdate={ handleTimeUpdate } controls></audio>
+            <audio ref={ audioRef } src={ props.audioFile } onTimeUpdate={ handleTimeUpdate } style={ {display: "none"} }></audio>
             <div className="h-[7%] bg-neutral-300 flex items-center px-4">
                 <Link to="/">Back</Link>
             </div>
