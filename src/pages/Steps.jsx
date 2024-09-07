@@ -12,7 +12,7 @@ export default function Steps(props) {
             endOfLineElementsRef.current.scrollIntoView({
                 behavior: "smooth",
                 block: "center"
-            })
+            })            
         }
 
         // Play audio every time there's a new line added
@@ -26,7 +26,7 @@ export default function Steps(props) {
             }
         }
 
-        return <div className="mb-10 px-4" ref={ setRef } key={ line.id }>
+        return <div className={`mb-10 px-4 ${ index === props.lines.length - 1 ? "bg-neutral-50 py-4" : "" }`} ref={ setRef } key={ line.id }>            
             <Text line={ line } />
         </div>
     })
