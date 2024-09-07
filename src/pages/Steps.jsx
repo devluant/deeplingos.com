@@ -16,11 +16,7 @@ export default function Steps(props) {
         }
 
         // Play audio every time there's a new line added
-        if(props.lines.at(-1)) {
-            const lastLine = props.lines.at(-1)
-            playAudio(lastLine.start)           
-            endTime.current = lastLine.end
-        }
+        playAudio()
     } , [props.lines])
 
     const lineElements = props.lines.map((line, index) => {
@@ -44,9 +40,13 @@ export default function Steps(props) {
     }
 
     // Audio Player
-    function playAudio(start) {
-        audioRef.current.currentTime = start
-        audioRef.current.play()
+    function playAudio() {        
+        if(props.lines.at(-1)) {
+            const lastLine = props.lines.at(-1)
+            audioRef.current.currentTime = lastLine.start
+            audioRef.current.play()          
+            endTime.current = lastLine.end
+        }
     }
 
     function handleTimeUpdate() {
