@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 export default function Steps(props) {
     const endOfLineElementsRef = React.useRef(null)
@@ -32,8 +33,9 @@ export default function Steps(props) {
     }
 
     return (
-        <div className="h-full flex flex-col justify-evenly border-4 border-yellow-300">
+        <div className="h-screen flex flex-col justify-evenly border-4 border-yellow-300">
             <div className="h-[7%] bg-neutral-300">
+                <Link to="/">Back</Link>
             </div>
             <div className="h-5/6 overflow-y-auto bg-neutral-200">
                 { lineElements }
