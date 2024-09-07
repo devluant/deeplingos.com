@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Text from "../components/Text"
 import Dialogue from "../components/TextLineTypes/Dialogue"
 import Intro from "../components/TextLineTypes/Intro"
 import DialogueCTN from "../components/TextLineTypes/DialogueCTN"
