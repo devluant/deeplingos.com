@@ -1,0 +1,380 @@
+[
+    {
+      "id": "be19caef-a2a7-4696-83fa-8db5564890f7",
+      "pinyin": "Dì|èr|kè",
+      "chinese": "第|二|课",
+      "english": "Lesson 2",
+      "type": "intro",
+      "start": 0,
+      "end": 1,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "flags-of-the-world.webp",
+        "alt": "flags of all countries of the world"
+      }
+    },
+    {
+      "id": "ae68d037-92e9-4042-a0a2-7387f504b579",
+      "pinyin": "Dīngdōng,|ménlíng|xiǎng|le",
+      "chinese": "叮咚,|门铃|响|了",
+      "english": "Ding-dong, the doorbell rang.",
+      "type": "narrative",
+      "start": 1.2999999523162842,
+      "end": 3,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "doorbell.webp",
+        "alt": "yellow door bell"
+      }
+    },
+    {
+      "id": "636b3dc6-c0dc-461b-88be-f5c327e39262",
+      "pinyin": "Ménlíng|xiǎng|le|ma?",
+      "chinese": "门铃|响|了|吗?",
+      "english": "Did the doorbell ring?",
+      "type": "question",
+      "start": 3.4000000953674316,
+      "end": 4.5,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "2574b5a0-4f76-4e00-b7fc-abfa1c0344e2",
+      "pinyin": "Duì,|ménlíng|xiǎng|le.",
+      "chinese": "对,|门铃|响|了。",
+      "english": "Yes, the doorbell rang.",
+      "type": "answer",
+      "start": 4.900000095367432,
+      "end": 6.400000095367432,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "057d9ba5-e49f-4ca6-9051-4674dc99910f",
+      "pinyin": "Ménlíng|xiǎng|le|háishì|diànhuà|xiǎng|le?",
+      "chinese": "门铃|响|了|还是|电话|响|了？",
+      "english": "Did the doorbell ring or did the telephone ring?",
+      "type": "question",
+      "start": 6.800000190734863,
+      "end": 9,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "58484e3c-96db-4e67-93e8-3ce31da6c9bb",
+      "pinyin": "Ménlíng|xiǎng|le.",
+      "chinese": "门铃|响|了。",
+      "english": "The doorbell rang.",
+      "type": "answer",
+      "start": 9.5,
+      "end": 10.5,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "d01aff00-50de-405c-a250-9668935b92c3",
+      "pinyin": "Wèishénme|ménlíng|xiǎng|le?",
+      "chinese": "为什么|门铃|响|了？",
+      "english": "Why did the doorbell ring?",
+      "type": "question",
+      "start": 10.899999618530273,
+      "end": 12.300000190734863,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "51acc0a7-8ffd-4e4e-a597-4b8826ce8c19",
+      "pinyin": "Ménlíng|xiǎng|le,|yīnwèi|Tanaka|dào|le.|Tā|àn|le|ménlíng.",
+      "chinese": "门铃|响|了，|因为|田中|到|了。|他|按|了|门铃。",
+      "english": "The doorbell rang because Tanaka arrived. He pressed the doorbell.",
+      "type": "answer",
+      "start": 12.699999809265137,
+      "end": 16.399999618530273,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "0d1c95e8-d093-4fd5-90da-ffe997987f1b",
+      "pinyin": "Ménlíng|xiǎng|le,|duì|ma?",
+      "chinese": "门铃|响|了，|对|吗？",
+      "english": "The doorbell rang, didn't it?",
+      "type": "question",
+      "start": 16.799999237060547,
+      "end": 18.399999618530273,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "61ed7888-eb74-4128-b5ff-545bb0031900",
+      "pinyin": "Duì,|ménlíng|xiǎng|le.",
+      "chinese": "对，|门铃|响|了。",
+      "english": "Yes, the doorbell rang.",
+      "type": "answer",
+      "start": 18.799999237060547,
+      "end": 20.299999237060547,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "3b59bc4d-427f-42bf-9d56-ce3d0b2e8bf3",
+      "pinyin": "Nǐmen|hǎo  ",
+      "chinese": "你们|好",
+      "english": "Hello, everyone",
+      "type": "dialogue",
+      "start": 20.700000762939453,
+      "end": 21.5,
+      "speakerName": {
+        "pinyin": "Tiánzhōng",
+        "chinese": "田中",
+        "english": "Tanaka"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "8d587c64-7017-4455-ae66-acae271822bb",
+      "pinyin": "Lái,|wǒ|gěi|nǐmen|jièshào  ",
+      "chinese": "来,|我|给|你们|介绍  ",
+      "english": "Come, I'll introduce you",
+      "type": "dialogue",
+      "start": 21.899999618530273,
+      "end": 23.600000381469727,
+      "speakerName": {
+        "pinyin": "Lǐ Míng",
+        "chinese": "李明",
+        "english": "Li Ming"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "c98df022-e1e2-4ef2-b446-0152a1fab6f9",
+      "pinyin": "Dàwèi,|zhè|shì|Tiánzhōng.  ",
+      "chinese": "大卫,|这|是|田中。  ",
+      "english": "David, this is Tanaka.",
+      "type": "dialogue-ctn",
+      "start": 24.100000381469727,
+      "end": 25.799999237060547,
+      "speakerName": {
+        "pinyin": "Lǐ Míng",
+        "chinese": "李明",
+        "english": "Li Ming"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "b6d8bfb2-9693-4e6c-b52d-c65803ac97af",
+      "pinyin": "Tā|shì|wǒ|de|péngyǒu.  ",
+      "chinese": "他|是|我|的|朋友。  ",
+      "english": "He is my friend.",
+      "type": "dialogue-ctn",
+      "start": 26.200000762939453,
+      "end": 27.5,
+      "speakerName": {
+        "pinyin": "Lǐ Míng",
+        "chinese": "李明",
+        "english": "Li Ming"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "95ed08ff-e083-4d02-8705-e06e6c724dec",
+      "pinyin": "Yě|shì|wǒmen|dàxué|de|xuéshēng.  ",
+      "chinese": "也|是|我们|大学|的|学生。  ",
+      "english": "He is also a student at our university.",
+      "type": "dialogue-ctn",
+      "start": 27.899999618530273,
+      "end": 29.700000762939453,
+      "speakerName": {
+        "pinyin": "Lǐ Míng",
+        "chinese": "李明",
+        "english": "Li Ming"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "81df84da-4fe1-46f6-8284-5c08ea7d1530",
+      "pinyin": "Tiánzhōng,|zhè|shì|Dàwèi.  ",
+      "chinese": "田中,|这|是|大卫。  ",
+      "english": "Tanaka, this is David.",
+      "type": "dialogue-ctn",
+      "start": 30.200000762939453,
+      "end": 31.799999237060547,
+      "speakerName": {
+        "pinyin": "Lǐ Míng",
+        "chinese": "李明",
+        "english": "Li Ming"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "759816c9-6464-4eec-bbce-19b3c300f831",
+      "pinyin": "Cóng|Yīngguó|lái.  ",
+      "chinese": "从|英国|来。",
+      "english": "He comes from England.",
+      "type": "dialogue-ctn",
+      "start": 32.29999923706055,
+      "end": 33.29999923706055,
+      "speakerName": {
+        "pinyin": "Lǐ Míng",
+        "chinese": "李明",
+        "english": "Li Ming"
+      },
+      "image": {
+        "src": "uk-flag.webp",
+        "alt": "flag of the UK"
+      }
+    },
+    {
+      "id": "2689c681-aea0-46c8-bfaf-cb88d5ed4b67",
+      "pinyin": "Tiánzhōng|shì|LǐMíng|de|péngyǒu|ma?  ",
+      "chinese": "田中|是|李明|的|朋友|吗?",
+      "english": "Is Tianzhong Li Ming's friend?",
+      "type": "question",
+      "start": 33.79999923706055,
+      "end": 35.5,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "6cde5a1a-f1d1-4267-b32b-b36c8baa6380",
+      "pinyin": "Duì,|Tiánzhōng|shì|LǐMíng|de|péngyǒu.  ",
+      "chinese": "对,|田中|是|李明|的|朋友。",
+      "english": "Yes, Tianzhong is Li Ming's friend.",
+      "type": "answer",
+      "start": 36,
+      "end": 38.099998474121094,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "bbc67194-fb1c-4ff1-9f2e-3f451c74a2bd",
+      "pinyin": "Dàwèi|shì|LǐMíng|de|péngyǒu|ma?  ",
+      "chinese": "大卫|是|李明|的|朋友|吗?",
+      "english": "Is David Li Ming's friend?",
+      "type": "question",
+      "start": 38.599998474121094,
+      "end": 40.29999923706055,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    },
+    {
+      "id": "8cbffdb1-b8c3-4d6d-b65f-608432358129",
+      "pinyin": "Bù,|Dàwèi|bù|shì|LǐMíng|de|péngyǒu.  ",
+      "chinese": "不,|大卫|不|是|李明|的|朋友。",
+      "english": "No, David is not Li Ming's friend.",
+      "type": "answer",
+      "start": 40.79999923706055,
+      "end": 43,
+      "speakerName": {
+        "pinyin": "n/a",
+        "chinese": "n/a",
+        "english": "n/a"
+      },
+      "image": {
+        "src": "n/a",
+        "alt": "n/a"
+      }
+    }
+  ]
