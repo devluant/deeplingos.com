@@ -9,9 +9,9 @@ export default function Home(props) {
         const { lessonId, lessonDurationInSeconds } = info
         
 
-        if (localStorage.getItem("user")) {
-            const userInfo = localStorage.getItem("user")
-            reps = JSON.parse(userInfo).stats[`${lessonId}`].reps
+        if (localStorage.getItem("userData")) {
+            const userData = localStorage.getItem("userData")
+            reps = JSON.parse(userData).lessonsData[`${lessonId}`].stats.reps
             duration = lessonDurationInSeconds
         }
     }
@@ -21,7 +21,7 @@ export default function Home(props) {
             <UploadMP3File setLessonData={ props.setLessonData } />
             {
                 (props.lessonData.text !== undefined && props.lessonData.text.length > 0) ? 
-                <p>:: <Link to="/steps">Start</Link> :: { props.lessonData.info.lessonSubtitle }: { props.lessonData.info.lessonTitle } :: stats={ Math.floor(reps * duration / 3600) } hours & { reps } reps</p> : <h1>No Lesson Text Found</h1>
+                <p>:: <Link to="/steps">Start</Link> :: { props.lessonData.info.lessonSubtitle }: { props.lessonData.info.lessonTitle } :: stats={ reps } reps</p> : <h1>No Lesson Text Found</h1>
 
             }
         </div>
