@@ -104,13 +104,13 @@ export default function Steps(props) {
 
             if (localStorage.getItem("user")) {            
                 const userObj =JSON.parse(localStorage.getItem("user"))
-                userObj.stats.lessonId.reps += 1
-                localStorage.setItem("user" , JSON.stringify(userObj))
+                userObj.stats[lessonId].reps += 1
+                localStorage.setItem("user", JSON.stringify(userObj))
             } else {
                 const newUserObj = {
                     userId: crypto.randomUUID(),
                     stats: {                    
-                        lessonId: {
+                        [lessonId]: {
                             reps: 1
                         }                             
                     }
