@@ -22,8 +22,8 @@ export default function Steps(props) {
         // Play audio every time there's a new line added
         playAudio()
 
-        // STATS functionality
-        stats()
+        // Run Persist User Data on Local Storage functionality
+        persistUserDataOnLocalStorage()
     } , [props.lines])
 
     const lineElements = props.lines.map((line, index) => {
@@ -96,26 +96,41 @@ export default function Steps(props) {
         console.log(currentPlaybackRate)
     }
 
-    // STATS functionality
-    function stats() {
+    // Persist User Data on Local Storage functionality
+    function persistUserDataOnLocalStorage() {
         if (props.lines.length === props.lessonData.text.length) {
-            // console.log("+1")
-            const { lessonId } = props.lessonData.info            
+            const { lessonId, lessonDurationInSeconds} = props.lessonData.info
+            
+            const userDataName = "userData"
 
-            if (localStorage.getItem("user")) {            
-                const userObj =JSON.parse(localStorage.getItem("user"))
-                userObj.stats[lessonId].reps += 1
-                localStorage.setItem("user", JSON.stringify(userObj))
-            } else {
-                const newUserObj = {
-                    userId: crypto.randomUUID(),
-                    stats: {                    
-                        [lessonId]: {
-                            reps: 1
-                        }                             
+            if (localStorage.getItem(userDataName)) {            
+                const userDataObj =JSON.parse(localStorage.getItem(userDataName))
+                if (userDataObj.lessonsData[lessonId]) {
+                    userDataObj.lessonsData[lessonId].stats.reps += 1
+                } else {
+                    userDataObj.lessonsData[lessonId] = {
+                        "stats": {
+                            "reps": 1
+                        }
                     }
                 }
-                localStorage.setItem("user", JSON.stringify(newUserObj))
+
+                userDataObj.exposureHours += lessonDurationInSeconds
+                
+                localStorage.setItem(userDataName, JSON.stringify(userDataObj))
+            } else {
+                const newUserDataObj = {
+                    "lessonsData": {
+                      [lessonId]: {
+                        "stats": {
+                          "reps": 1
+                        }
+                      }
+                    },
+                    "exposureHours": lessonDurationInSeconds,
+                    "userInfo" : {}
+                }
+                localStorage.setItem(userDataName, JSON.stringify(newUserDataObj))
             }
         }       
     }
