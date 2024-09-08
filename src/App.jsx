@@ -6,12 +6,15 @@ import Steps from "./pages/Steps";
 const AudioContext = React.createContext()
 
 export default function App() {
-    const [lessonData, setLessonData] = React.useState([])    
+    const [lessonData, setLessonData] = React.useState({})
     const [lines, setLines] = React.useState([])
     const [audioFile, setAudioFile] = React.useState(null)
 
     React.useEffect(() => {
-        setLines([lessonData[0]])
+        if (lessonData.text !== undefined) {
+            setLines([lessonData.text[0]])
+        }
+        
     }, [lessonData])
 
     return (        

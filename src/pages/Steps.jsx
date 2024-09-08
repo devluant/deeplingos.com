@@ -49,15 +49,15 @@ export default function Steps(props) {
     })
 
     function handleContinue() {
-        if (props.lines.length < props.lessonData.length) {
-            props.setLines(prev => [...prev, props.lessonData[prev.length]])                                        
+        if (props.lines.length < props.lessonData.text.length) {
+            props.setLines(prev => [...prev, props.lessonData.text[prev.length]])                                        
         } else {
             console.log("done")
         }        
     }
 
     function restartLesson() {
-        props.setLines([props.lessonData[0]])
+        props.setLines([props.lessonData.text[0]])
     }
 
     function handleDisplayTranslation() {
@@ -108,7 +108,7 @@ export default function Steps(props) {
 
             <div className="h-[7%] px-4 bg-neutral-300 flex items-center">
                 {
-                    props.lines.length < props.lessonData.length ?
+                    props.lines.length < props.lessonData.text.length ?
                     <div className="flex flex-grow justify-between">
                         <button onClick={ handlePlaybackRate }>0.75X</button>
                         <button onClick={ handleContinue }>Continue</button>
