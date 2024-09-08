@@ -23,9 +23,7 @@ export default function Steps(props) {
         playAudio()
 
         // STATS functionality
-        if (props.lines.length === props.lessonData.text.length) {
-            console.log("+1")
-        }
+        stats()
     } , [props.lines])
 
     const lineElements = props.lines.map((line, index) => {
@@ -96,6 +94,30 @@ export default function Steps(props) {
         }
         currentPlaybackRate = audioRef.current.playbackRate
         console.log(currentPlaybackRate)
+    }
+
+    // STATS functionality
+    function stats() {
+        if (props.lines.length === props.lessonData.text.length) {
+            // console.log("+1")
+            const { lessonId } = props.lessonData.info            
+
+            if (localStorage.getItem("user")) {            
+                const userObj =JSON.parse(localStorage.getItem("user"))
+                userObj.stats.lessonId.reps += 1
+                localStorage.setItem("user" , JSON.stringify(userObj))
+            } else {
+                const newUserObj = {
+                    userId: crypto.randomUUID(),
+                    stats: {                    
+                        lessonId: {
+                            reps: 1
+                        }                             
+                    }
+                }
+                localStorage.setItem("user", JSON.stringify(newUserObj))
+            }
+        }       
     }
 
     return (
