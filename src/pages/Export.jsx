@@ -11,7 +11,7 @@ export default function Export() {
     return (
         <div>
             <Link to="/">Back to Home</Link>
-            { userData }
+            <div className="mt-4 p-4">{ userData }</div>            
         </div>
     )
 }
