@@ -21,6 +21,11 @@ export default function Steps(props) {
 
         // Play audio every time there's a new line added
         playAudio()
+
+        // STATS functionality
+        if (props.lines.length === props.lessonData.text.length) {
+            console.log("+1")
+        }
     } , [props.lines])
 
     const lineElements = props.lines.map((line, index) => {

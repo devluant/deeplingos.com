@@ -2,8 +2,6 @@ import { Link } from "react-router-dom"
 import UploadMP3File from "../components/UploadMp3File"
 
 export default function Home(props) {
-    console.log()
-    
     return (
         <div className="h-screen border-4 border-red-300">
             <UploadMP3File setLessonData={ props.setLessonData } />
