@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Export() {
     const userDataName = "userData"
     let userData
@@ -8,6 +10,7 @@ export default function Export() {
 
     return (
         <div>
+            <Link to="/">Back to Home</Link>
             { userData }
         </div>
     )

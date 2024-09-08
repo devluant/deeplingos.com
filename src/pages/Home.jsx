@@ -24,6 +24,7 @@ export default function Home(props) {
                 <p>:: <Link to="/steps">Start</Link> :: { props.lessonData.info.lessonSubtitle }: { props.lessonData.info.lessonTitle } :: stats={ reps } reps</p> : <h1>No Lesson Text Found</h1>
 
             }
+            <Link to="/export">Export user data</Link>
         </div>
     )
 }
