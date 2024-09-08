@@ -17,7 +17,7 @@ export default function Home(props) {
     }
     
     return (
-        <div className="h-screen border-4 border-red-300">
+        <div className="h-dvh border-4 border-red-300">
             <UploadMP3File setLessonData={ props.setLessonData } />
             {
                 (props.lessonData.text !== undefined && props.lessonData.text.length > 0) ? 
